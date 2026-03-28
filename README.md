@@ -47,6 +47,6 @@ To run this automatically when your computer starts:
    systemctl --user start razer-mixer.service
    ```
 
-## License
-
-MIT
+## Not yet working
+- RGB
+- Microphone (partly)
