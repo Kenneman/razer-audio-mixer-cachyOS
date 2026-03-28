@@ -65,7 +65,14 @@ def setup_hardware():
     run_cmd(f"pactl set-sink-mute {HW_SINK_0} 0")
     run_cmd(f"pactl set-sink-mute {HW_SINK_1} 0")
     run_cmd(f"pactl set-default-sink {HW_SINK_0}")
-    print("--- Klart! ---")
+
+    # 7. Mikrofon-inställningar (Fixar distorsion och volym)
+    MIC_SOURCE = "alsa_input.usb-Razer_Razer_Audio_Mixer-00.pro-input-0"
+    run_cmd("amixer -c 0 cset numid=16 25") # Sätt Mic Gain till ca +6dB
+    run_cmd(f"pactl set-source-mute {MIC_SOURCE} 0")
+    run_cmd(f"pactl set-source-volume {MIC_SOURCE} 100%")
+    
+    print("--- Klart! (Ljud & Mikrofon initierat) ---")
 
 def initialize_hid():
     try:
