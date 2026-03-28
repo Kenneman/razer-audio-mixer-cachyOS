@@ -23,7 +23,7 @@ This script:
    ```
 2. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USER/razer-audio-mixer-linux.git
+   git clone https://github.com/Kenneman/razer-audio-mixer-cachyOS.git
    cd razer-audio-mixer-linux
    ```
 3. Run the daemon:
