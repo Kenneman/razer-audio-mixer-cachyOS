@@ -63,7 +63,7 @@ def setup_hardware():
     run_cmd(f"pactl set-sink-volume {HW_SINK_1} 100%")
     run_cmd(f"pactl set-sink-mute {HW_SINK_0} 0")
     run_cmd(f"pactl set-sink-mute {HW_SINK_1} 0")
-    run_cmd(f"pactl set-default-sink {HW_SINK_0}")
+    run_cmd("pactl set-default-sink razer_system")
 
     # 7. Mikrofon-inställningar (Fixar distorsion och volym)
     MIC_SOURCE = "alsa_input.usb-Razer_Razer_Audio_Mixer-00.pro-input-0"
